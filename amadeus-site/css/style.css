@@ -1,0 +1,222 @@
+/* Reset semplice */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f6efe4
+}
+
+/*gestione fonts*/
+@font-face {
+  font-family: 'PristinaCustom';
+  src: url('../fonts/Pristina.woff2') format('woff2'),
+       url('../fonts/Pristina.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pristina-text {
+  font-family: 'PristinaCustom', cursive;
+}
+
+
+/* Titolo sopra la navbar */
+.site-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* Barra di navigazione */
+.site-header {
+  background-color: #d9c4a8; /* beige/marroncino chiaro */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: auto;
+  margin: auto;
+  padding: 10px 20px;
+}
+.nav-links {
+  display: flex;
+  gap: 75px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #000;
+}
+
+/* Bottone toggle (hamburger) per mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #d9c4a8;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+/* Sezioni contenuto */
+main section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------SEZIONE AROMATOUCH-----------------*/
+
+/* Contenitore principale */
+.aromatouch {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Sezioni */
+.aromatouch section {
+  margin-bottom: 40px; /* spaziatura uniforme tra blocchi */
+}
+
+/* Titoli */
+.aromatouch h2,
+.aromatouch h3 {
+  margin-bottom: 10px; /* distanzia bene il titolo dal testo */
+  font-weight: 600;    /* grassetto solo per i titoli */
+  color: #444;
+}
+
+.aromatouch .subtitle {
+  font-style: italic;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Paragrafi */
+.aromatouch p {
+  margin-bottom: 15px;
+  font-weight: 400; /* niente grassetto nel corpo del testo */
+}
+
+/* Liste */
+.aromatouch ul {
+  margin: 15px 0 20px 25px; /* più indentazione */
+  padding-left: 20px;
+}
+
+.aromatouch li {
+  margin-bottom: 8px;
+}
+
+/* Nota finale */
+.aromatouch .note {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 3px solid #ccc;
+}
+
+
+
+
+/*----------------------------------------------------------*/
+
+/*sezione prenota - tasto prenota - qr code*/
+/* Sezione prenota */
+.prenota {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+
+.prenota-intro {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #4a3b2c; /* marrone caldo ed elegante */
+  margin-bottom: 60px; /* distanza sotto il testo introduttivo */
+}
+
+/* Pulsante prenota */
+.btn-prenota {
+  display: inline-block;
+  background-color: #5a3e2b; /* marrone scuro caldo */
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 80px; /* spazio sotto il pulsante */
+}
+
+.btn-prenota:hover {
+  background-color: #7b5640; /* marrone un po' più chiaro al passaggio */
+  transform: translateY(-2px);
+  
+}
+/* QR Code */
+.qr-wrapper {
+  display: block;
+  margin-top: 30px;
+  text-align: center; /* così centri tutto */
+}
+
+.qr-code {
+  width: 225px;   /* dimensione regolabile */
+  height: auto;   /* mantieni proporzioni */
+  display: inline-block;
+}
+
+.qr-caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
