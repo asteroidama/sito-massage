@@ -1,0 +1,396 @@
+/* Reset semplice */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f6efe4
+}
+
+/* regole generali */
+main {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  padding: 0px 10px;
+  margin: 60px 0;
+  font-size: 14pt;
+  color: #4a3b2c;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+p { /* paragrafo */
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+ul {
+  margin-left: 20px;
+  /*padding-left: 5px;*/
+}
+
+li { /* indentazione per lista */
+  margin-bottom: 8px;
+}
+
+/* Titolo sopra la navbar */
+.site-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* logo iniziali */
+.logo {
+  width: 120px;   /* dimensione in header, la cambi a piacere */
+  height: auto;   /* mantiene proporzioni */
+  margin: 5px auto auto auto;
+  display: block;
+  color: #222;    /* colore predefinito */
+}
+
+/* logo Modalità scura
+@media (prefers-color-scheme: dark) {
+  .logo {
+    color: #fff;
+  }
+}*/
+
+
+/* Barra di navigazione 
+.site-header {
+
+}*/
+.navbar {
+  background-color: #d9c4a8; /* beige/marroncino chiaro */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+.nav-links {
+  display: flex;
+  gap: 75px;
+  list-style: none;
+  align-items: center; /* <-- centra i link verticalmente */
+  margin: 0;          /* elimina margini di default */
+  padding: 0;
+}
+.nav-links li {
+  display: flex;           /* <-- forza flex */
+  align-items: center;     /* <-- centra il contenuto del li */
+  margin: 0;          /* elimina margini di default */
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  margin: 0;          /* elimina margini di default */
+  padding: 0;
+  line-height: 35px; /*altezza percepita del testo*/
+}
+.nav-links a:hover {
+  color: #000;
+}
+
+/* Bottone toggle (hamburger) per mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  color: #333;
+}
+
+.nav-toggle span {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Effetto X quando attivo */
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #d9c4a8;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .nav-links.open li{
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  
+  .nav-links a {
+  line-height: 50px; /* un po’ più compatta in mobile */
+  }
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------SEZIONE AROMATOUCH-----------------*/
+
+/* Contenitore principale */
+.aromatouch {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+
+.aromatouch .subtitle {
+  font-style: italic;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Nota finale */
+.aromatouch .note {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 3px solid #ccc;
+}
+
+
+
+/*--------------SEZIONE SVEDESE-----------------*/
+
+.svedese {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+
+.svedese .subtitle {
+  font-style: italic;
+  margin-bottom: 20px;
+  display: block;
+}
+
+
+/* Nota finale */
+.svedese .note {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 3px solid #ccc;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+/* --- SEZIONE PRENOTA --- */
+.prenota {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+
+.prenota-intro {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #4a3b2c; /* marrone caldo ed elegante */
+  margin-bottom: 60px; /* distanza sotto il testo introduttivo */
+}
+
+/* Pulsante prenota */
+.btn-prenota {
+  display: inline-block;
+  background-color: #5a3e2b; /* marrone scuro caldo */
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 80px; /* spazio sotto il pulsante */
+}
+
+.btn-prenota:hover {
+  background-color: #7b5640; /* marrone un po' più chiaro al passaggio */
+  transform: translateY(-2px);
+  
+}
+/* QR Code */
+.qr-wrapper {
+  display: block;
+  margin-top: 30px;
+  text-align: center; /* così centri tutto */
+}
+
+.qr-code {
+  width: 225px;   /* dimensione regolabile */
+  height: auto;   /* mantieni proporzioni */
+  display: inline-block;
+}
+
+.qr-caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+
+/* --- SEZIONE QUIZ --- */
+#quiz-section {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+#quizContainer {
+  margin-top: 2rem;
+  padding: 0;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: none;
+  transition: opacity 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.quiz-controls {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fade {
+  opacity: 0;
+}
+
+#quizContainer {
+  transition: opacity 0.8s ease; /* durata fade */
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Opzioni quiz: radio button con testo allineato */
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Pulsanti centrati */
+.quiz-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.quiz-controls button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}
+
+.btn-quiz {
+  background-color: #5a3e2b; /* marrone scuro caldo */
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-quiz:hover {
+  background-color: #7b5640; /* marrone un po' più chiaro al passaggio */
+  transform: translateY(-2px);
+}
+
+
+/* --- FINE SEZIONE QUIZ --- */
