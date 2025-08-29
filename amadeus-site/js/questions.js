@@ -52,7 +52,7 @@ const questions = [
     question: "Preferisci un kit da usare solo per te o da condividere?",
     answers: [
       { text: "Solo per me", kits: ["family", "aromatouch", "restore"] },
-      { text: "Da condividere con la mia famiglia", kits: ["home", "kids", "all"] },
+      { text: "Da condividere con la mia famiglia", kits: ["kids", "all"] },
       { text: "Lo userò anche con i colleghi", kits: ["home", "all"] },
       { text: "Voglio condividerlo con amici e conoscenti", kits: ["home", "aromatouch", "all"] }
     ]
@@ -78,3 +78,4 @@ const tiebreaker = {
       { text: "Molto ampio", kits: ["all"] }
     ]
 };
+
