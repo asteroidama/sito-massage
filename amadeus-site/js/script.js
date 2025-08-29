@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Funzione Risultato
   function showResult() {
+    console.log("Punteggi finali:", scores); // stampa i punteggi
     const maxScore = Math.max(...Object.values(scores));
     let winners = Object.keys(scores).filter(kit => scores[kit] === maxScore);
 
