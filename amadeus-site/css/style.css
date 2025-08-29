@@ -305,26 +305,36 @@ li { /* indentazione per lista */
 /* --- SEZIONE QUIZ --- */
 #quiz-section {
   margin-top: 3rem;
-  text-align: left;
+  text-align: center;
 }
 
+/* contenitore quiz inizialmente nascosto */
+
 #quizContainer {
-  margin-top: 2rem;
-  padding: 0;
-  max-width: 600px;
   margin: 2rem auto;
   background: none;
   transition: opacity 0.5s ease;
 }
 
-.hidden {
-  display: none;
+/* Contenitore domande */
+.quiz-question {
+  max-height: 800px;
 }
 
+/* Risposte */
+.quiz-option {
+  display: block;         /* una sotto l’altra */
+  margin-bottom: 0.5rem;  /* spazio tra risposte */
+}
+
+/* pulsanti */
 .quiz-controls {
   margin-top: 2rem;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .quiz-controls button:disabled {
@@ -332,12 +342,27 @@ li { /* indentazione per lista */
   cursor: not-allowed;
 }
 
-.fade {
-  opacity: 0;
+.btn-quiz {
+  background-color: #5a3e2b; /* marrone scuro caldo */
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  min-width: 8.75rem;
 }
 
-#quizContainer {
-  transition: opacity 0.8s ease; /* durata fade */
+.btn-quiz:hover {
+  background-color: #7b5640; /* marrone un po' più chiaro al passaggio */
+  transform: translateY(-2px);
+}
+
+.fade {
+  opacity: 0;
 }
 
 .fade-out {
@@ -353,44 +378,15 @@ li { /* indentazione per lista */
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  text-align: left;       /* allinea a sinistra le domande e risposte */
+  padding-left: 12rem;     /* margine interno per leggibilità */
 }
-
-.quiz-option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Pulsanti centrati */
-.quiz-controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
+/*
 .quiz-controls button {
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
 }
 
-.btn-quiz {
-  background-color: #5a3e2b; /* marrone scuro caldo */
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 14px 28px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.btn-quiz:hover {
-  background-color: #7b5640; /* marrone un po' più chiaro al passaggio */
-  transform: translateY(-2px);
-}
 
 
 /* --- FINE SEZIONE QUIZ --- */
