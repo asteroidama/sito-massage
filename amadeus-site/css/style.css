@@ -308,97 +308,6 @@ li { /* indentazione per lista */
   text-align: center;
 }
 
-/* contenitore quiz inizialmente nascosto */
-
-#quizContainer {
-  margin: 2rem auto;
-  background: none;
-  transition: opacity 0.5s ease;
-}
-
-/* Contenitore domande */
-.quiz-question {
-  max-height: 800px;
-}
-
-.quiz-question h3{
-  max-width: 37.5rem;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Risposte */
-.quiz-option {
-  display: block;         /* una sotto l’altra */
-  margin-bottom: 0.5rem;  /* spazio tra risposte */
-}
-
-/* pulsanti */
-.quiz-controls {
-  margin-top: 2rem;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.quiz-controls button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.btn-quiz {
-  background-color: #5a3e2b; /* marrone scuro caldo */
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  min-width: 8.75rem;
-}
-
-.btn-quiz:hover {
-  background-color: #7b5640; /* marrone un po' più chiaro al passaggio */
-  transform: translateY(-2px);
-}
-
-/* classe per nascondere pulsanti quando serve */
-.hidden {
-  display: none;
-}
-
- /* effetti fade */
-.fade {
-  opacity: 0;
-}
-
-.fade-out {
-  opacity: 0;
-}
-
-.fade-in {
-  opacity: 1;
-}
-
-/* Opzioni quiz: radio button con testo allineato */
-.quiz-form {
-  max-width: 37.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  text-align: left;       /* allinea a sinistra le domande e risposte */
-}
-
-
-
 /*   ---   VERSIONE NUOVA QUIZ   ---   */
 
 /* ================================
@@ -463,8 +372,7 @@ li { /* indentazione per lista */
   background-color: #5a3e2b;
   color: #fff;
   transition: background 0.3s ease, transform 0.2s ease;
-  font-weight: bold;
-  font-size: 1.2rem;
+  
 }
 
 #navigation-buttons button:disabled {
@@ -488,6 +396,8 @@ li { /* indentazione per lista */
   border-radius: 12px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 #start-btn:hover {
