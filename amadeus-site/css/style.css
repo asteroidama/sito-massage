@@ -115,7 +115,7 @@ li { /* indentazione per lista */
   color: #000;
 }
 
-/* Bottone hamburger */
+/* BOTTONE TOGGLE MENU */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -127,6 +127,10 @@ li { /* indentazione per lista */
   cursor: pointer;
   padding: 0;
   z-index: 1001;
+}
+
+.toggle-links {
+  display: none; /* Nascondi di default */
 }
 
 .nav-toggle span {
@@ -150,7 +154,7 @@ li { /* indentazione per lista */
 
 /* --- VERSIONE MOBILE --- */
 @media (max-width: 48rem) { /* 768px */
-  .nav-links {
+  .toggle-links {
     display: flex;
     flex-direction: column;
     background-color: #d9c4a8;
@@ -168,7 +172,7 @@ li { /* indentazione per lista */
     transition: all 0.3s ease;
   }
 
-  .nav-links.open {
+  .toggle-links.open {
     max-height: 31.25rem; /* 500px, ampio per più voci */
     opacity: 1;
     transform: translateY(0);
@@ -179,7 +183,7 @@ li { /* indentazione per lista */
     margin-left: auto;
   }
 
-  .nav-links a {
+  .toggle-links a {
     line-height: 3.125rem; /* 50px */
   }
 }
