@@ -1,7 +1,7 @@
 // toggle-menu.js
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".nav-toggle");
-  const toggleLinks = document.querySelector(".toggle-links");
+  const navLinks = document.querySelector(".nav-links");
 
   if (!toggleBtn || !navLinks) {
     console.warn("nav-toggle o toggle-links non trovati nell'HTML");
