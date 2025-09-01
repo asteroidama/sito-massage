@@ -154,15 +154,15 @@ li { /* indentazione per lista */
 
 /* --- VERSIONE MOBILE --- */
 @media (max-width: 768px) { /* 768px */
-  .toggle-links {
-    display: flex;
-    flex-direction: column;
-    background-color: #d9c4a8;
+  .nav-links {
     position: absolute;
-    top: 3.75rem; /* 60px */
+    top: 60px; /* subito sotto navbar */
     right: 0;
     width: 100%;
-    padding: 1.25rem; /* 20px */
+    flex-direction: column;
+    background-color: #d9c4a8;
+    padding: 20px;
+    display: none; /* default hidden */
 
     /* animazione slide down */
     max-height: 0;
@@ -172,7 +172,8 @@ li { /* indentazione per lista */
     transition: all 0.3s ease;
   }
 
-  .toggle-links.open {
+  .nav-links.open {
+    display:flex;
     max-height: 31.25rem; /* 500px, ampio per più voci */
     opacity: 1;
     transform: translateY(0);
