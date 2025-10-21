@@ -1,38 +1,32 @@
 /* --- VERSIONE MOBILE --- */
-@media (max-width: 768px) { /* 768px */
 
-/* TOGGLE MOBILE */
-  .nav-toggle {
-  display: flex;
-  margin-left: auto;
-  z-index: 2000;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 1.875rem;  /* 30px */
-  height: 1.5rem;   /* 24px */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: transform 0.5s ease-in-out;
+/* Logo mobile - nascosto per default, visibile solo su mobile */
+.logo-mobile {
+    display: none;
+}
+
+/* Toggle button - nascosto per default, visibile solo su mobile */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
 }
 
 .nav-toggle span {
-  width: 100%;
-  height: 0.1875rem; /* 3px */
-  background: #333;
-  border-radius: 2px;
-  transition: all 0.5s ease-in-out;
-  transform-origin: center; 
+    width: 25px;
+    height: 2px;
+    background: #5a3e2b;
+    transition: all 0.3s ease;
 }
 
-.nav-toggle.active {
-    transform: rotate(-180deg); /* Antiorario per apertura */
-}
-
-
+/* Animazione hamburger -> X */
 .nav-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: rotate(45deg) translate(8px, 8px);
 }
 
 .nav-toggle.active span:nth-child(2) {
@@ -40,95 +34,105 @@
 }
 
 .nav-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.nav-toggle.reverse {
-    transform: rotate(180deg); /* Orario per chiusura */
-}
-
-.nav-toggle.reverse span:nth-child(1) {
- transform: translateY(0) rotate(0deg);
-}
-
-.nav-toggle.reverse span:nth-child(2) {
- opacity: 1;
-}
-
-.nav-toggle.reverse span:nth-child(3) {
- transform: translateY(0) rotate(0deg);
-}
- 
-.nav-links {
- position: fixed;
- top: 60px; /* subito sotto navbar */
- right: 20px;
- min-width: 250px;
- background-color: #d9c4a8;
- padding: 0;
- transform-origin: top right; /* Espansione dal toggle */
- border-radius: 12px;
- box-shadow: 0 8px 24px rgba(0,0,0,0.15);
- flex-direction: column;
- gap: 1.5rem;
- /* STATO INIZIALE */
- opacity: 0;
- visibility: hidden;
- transform: scale(0) translateY(-20px);
-   
- /* TRANSIZIONE ESPANSIONE */
- transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.nav-links.active {
- max-height: 31.25rem; /* 500px, ampio per più voci */
- opacity: 1;
- visibility: visible;
- transform: scale(1) translateY(0);
-}
-
-.nav-links li {
- margin: 0;             /* spazio verticale fra i link */
- padding: 0;
- opacity: 0;
- transform: translateY(10px);
- transition: all 0.3s ease;
-}
-
-.nav-links a {
- display: block;
- text-decoration: none;
- padding: 0 0;
- border-radius: 8px;
- transition: all 0.2s ease;
- margin-bottom: 4px;
-}
-
-/* ANIMAZIONE SEQUENZIALE */
-.nav-links.active li:nth-child(1) { animation: fadeInUp 0.3s ease forwards 0.1s; }
-.nav-links.active li:nth-child(2) { animation: fadeInUp 0.3s ease forwards 0.2s; }
-.nav-links.active li:nth-child(3) { animation: fadeInUp 0.3s ease forwards 0.3s; }
-.nav-links.active li:nth-child(4) { animation: fadeInUp 0.3s ease forwards 0.4s; }
-.nav-links.active li:nth-child(5) { animation: fadeInUp 0.3s ease forwards 0.5s; }
-.nav-links.active li:nth-child(6) { animation: fadeInUp 0.3s ease forwards 0.6s; }
-.nav-links.active li:nth-child(7) { animation: fadeInUp 0.3s ease forwards 0.7s; }
-
-/* KEYFRAME per dissolvenza */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+/* ==================== TABLET ==================== */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 2.5rem;
     }
 }
-/* FINE TOGGLE */
 
-/* QUIZ Responsivo per dispositivi piccoli */
-  #quiz-wrapper {
-    padding: 15px;
-  }
-
-  #navigation-buttons button {
-    flex: 1;
-    margin: 0 5px;
-  }
-}/* --- FINE QUIZ --- */
+/* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+    
+    /* Nascondi logo SVG su mobile */
+    .logo-header {
+        display: none;
+    }
+    
+    /* Navbar fissa in alto */
+    .site-header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background-color: #d9c4a8;
+    }
+    
+    .navbar {
+        position: relative;
+        padding: 1rem 2rem;
+        justify-content: space-between;
+    }
+    
+    /* Mostra logo mobile */
+    .logo-mobile {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5a3e2b;
+        text-decoration: none;
+        z-index: 1001;
+    }
+    
+    /* Mostra toggle button */
+    .nav-toggle {
+        display: flex;
+    }
+    
+    /* Menu mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: rgba(139, 115, 85, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+        padding: 2rem;
+    }
+    
+    /* Menu aperto */
+    .nav-links.active {
+        right: 0;
+    }
+    
+    /* Link nel menu mobile */
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+    
+    /* Aggiungi padding-top al main per compensare navbar fissa */
+    main {
+        padding-top: 70px;
+    }
+    
+    /* QUIZ Responsivo per dispositivi piccoli */
+    #quiz-wrapper {
+        padding: 15px;
+    }
+    
+    #navigation-buttons button {
+        flex: 1;
+        margin: 0 5px;
+    }
+}
