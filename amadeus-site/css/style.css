@@ -7,7 +7,8 @@ body, h1, h2, p, ul {
 body {
     font-family: sans-serif;
     line-height: 1.6;
-    background-color: #f6efe4
+    background-color: #f6efe4;
+    overflow-x: hidden;
 }
 
 main {
@@ -565,8 +566,8 @@ li {
     padding: 8rem 4rem;
     position: relative;
     margin: 0 -100vw;
-    padding-left: calc(100vw + 4rem);
-    padding-right: calc(100vw + 4rem);
+    padding-left: 0;
+    padding-right: 0;
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards;
 }
